@@ -1,4 +1,7 @@
+/* globals require, process, setTimeout */
 /* jshint esnext:true */
+
+'use strict';
 
 const browserSync = require('browser-sync'),
     gulp = require('gulp'),
@@ -42,10 +45,14 @@ function watch() {
 }
 
 function templates() {
+    let jadeOptions = {};
+
+    if(isProdBuild) {
+        jadeOptions.pretty = true;
+    }
+
     return gulp.src(paths.templates)
-               .pipe(jade({
-                   pretty: true
-               }))
+               .pipe(jade(jadeOptions))
                .pipe(gulp.dest(out));
 }
 
@@ -64,7 +71,7 @@ function styles() {
             })
         ];
 
-    var pluginsToRun = commonPlugins;
+    let pluginsToRun = commonPlugins;
 
     if (isProdBuild) {
         pluginsToRun = commonPlugins.concat(prodPlugins);
