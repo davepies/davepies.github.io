@@ -1,0 +1,12 @@
+component(address) {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: var(--gridGutter);
+    grid-template-areas: "addressmail . addressweb";
+                         ". . .";
+
+    strong { text-transform: uppercase }
+
+    part(email) { grid-area: addressemail; }
+    part(web) { grid-area: addressweb; text-align: right; }
+}

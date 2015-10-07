@@ -1,0 +1,10 @@
+component(main) {
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+    grid-template-rows: var(--gridRows);
+    grid-template-areas: "article . aside";
+
+    part(article) { grid-area: article; }
+
+    part(aside) { grid-area: aside; }
+}

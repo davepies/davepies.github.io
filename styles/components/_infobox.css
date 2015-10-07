@@ -1,0 +1,12 @@
+component(infobox) {
+    padding: calc(var(--gridGutter) / 2);
+    border: 2px solid var(--borderColor);
+
+    ul { @extend unstyled-list }
+
+    part(header) {
+        padding-bottom: calc(var(--gridGutter) / 3);
+        color: var(--highlightColor);
+        border-bottom: 1px solid;
+    }
+}

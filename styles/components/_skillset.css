@@ -1,0 +1,19 @@
+component(skillset) {
+    ul { @extend unstyled-list }
+
+    part(item) {
+        margin-bottom: calc(var(--gridGutter) / 2);
+    }
+
+    part(heading) {
+        margin-bottom: calc(var(--gridGutter) / 4);
+        padding-bottom: 0;
+        font-size: 1rem;
+    }
+
+    part(indicator) {
+        appearance: none;
+        &::-webkit-progress-bar { background: var(--backgroundColor) }
+        &::-webkit-progress-value { background: color(var(--secondaryColor) a(0.6)) }
+    }
+}

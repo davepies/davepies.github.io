@@ -1,0 +1,6 @@
+component(section) {
+    part(heading) {
+        padding-bottom: calc(var(--gridGutter) / 3);
+        border-bottom: 2px solid;
+    }
+}

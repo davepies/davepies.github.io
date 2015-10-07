@@ -1,0 +1,24 @@
+html {
+    background: var(--backgroundColor);
+    padding: var(--gridGutter);
+}
+
+body {
+    background: white;
+    font-family: var(--mainFont);
+    color: var(--textColor);
+
+    border-right: var(--bodyBorder);
+    border-bottom: var(--bodyBorder);
+}
+
+section { margin-bottom: calc(var(--gridGutter) * 2) }
+
+:--firstLevel { padding: var(--gridGutter); }
+
+a { color: inherit; text-decoration: none; font-style: normal; }
+
+:--heading { @extend h; }
+h3 { @extend h3; }
+
+strong { font-style: normal }

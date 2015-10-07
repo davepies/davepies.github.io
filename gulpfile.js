@@ -40,6 +40,7 @@ function templates() {
 function styles() {
     return gulp.src(paths.styles)
                .pipe(postcss([
+                   require('postcss-import'),
                    require('cssnext')(),
                    require('postcss-nested'),
                    require('csstyle'),

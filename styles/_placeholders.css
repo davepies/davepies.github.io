@@ -1,0 +1,17 @@
+@define-placeholder unstyled-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@define-placeholder h {
+    margin-top: 0;
+    color: var(--secondaryColor);
+}
+
+
+@define-placeholder h3 {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--textColor);
+}

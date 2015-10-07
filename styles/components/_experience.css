@@ -1,0 +1,72 @@
+component(experience) {
+    part(content) { @extend unstyled-list }
+
+    part(item) {
+        display: grid;
+        grid-template-columns: 150px var(--gridGutter) 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "experience-heading . experience-content";
+        margin: 0;
+    }
+
+    part(heading) {
+        grid-area: experience-heading;
+        position: relative;;
+        margin: 0;
+        padding-bottom: calc(var(--gridGutter));
+        font-size: 1.4rem;
+        border-right: 1px dashed;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: calc(var(--gridGutter) - 16px);
+            width: 16px;
+            height: 16px;
+            background: var(--secondaryColor);
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+    }
+
+    part(timeend),
+    part(timestart) {
+        display: inline-block;
+        padding: 0.2rem;
+        background: var(--secondaryColor);
+        color: white;
+    }
+
+    part(timestart) {
+        background: var(--highlightColor);
+    }
+
+    part(timeend) {
+        margin-bottom: 0.2rem;
+    }
+
+    part(description) {
+        grid-area: experience-content;
+        margin: 0;
+    }
+
+    part(company) {
+        font-size: 1.1rem;
+    }
+
+    part(location) {
+        font-size: 0.9rem;
+    }
+
+    part(role) {
+        display: block;
+        font-size: 0.9rem;
+        font-style: italic;;
+    }
+
+    part(details) {
+        font-size: 0.9rem;
+    }
+}

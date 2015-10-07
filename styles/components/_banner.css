@@ -1,0 +1,27 @@
+component(banner) {
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+    grid-template-rows: var(--gridRows);
+    grid-template-areas: "banneraside banneraside banneraside"
+                         "bannermain bannermain bannermain";
+
+    background: var(--secondaryColor);
+    color: white;
+    padding: calc(var(--gridGutter));
+    text-align: center;
+
+    part(main) { grid-area: bannermain; }
+
+    part(heading) {
+        color: white;
+        display: inline-block;
+        margin-bottom: 0;
+        border-bottom: 2px solid;
+        font-weight: 300;
+        font-size: 5rem;
+    }
+
+    part(intro) { font-size: 1.1rem; }
+
+    part(aside) { grid-area: banneraside; text-align: left; }
+}

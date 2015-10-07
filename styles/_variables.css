@@ -1,0 +1,18 @@
+:root {
+    --secondaryColor: #44ccaa;
+    --textColor: #666;
+    --highlightColor: #ffbb00;
+    --backgroundColor: rgba(211, 211, 211, 0.3);
+    --borderColor: color(var(--backgroundColor) blackness(50%));
+
+    --mainFont: Roboto, sans-serif;
+    --gridGutter: 2.5rem;
+
+    --gridColumns: 1fr var(--gridGutter) 250px;
+    --gridRows: auto;
+
+    --bodyBorder: 4px solid var(--borderColor);
+}
+
+@custom-selector :--heading h1, h2, h3, h4;
+@custom-selector :--firstLevel main, footer;
