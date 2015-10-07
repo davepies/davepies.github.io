@@ -55,9 +55,34 @@ html(lang="en")
                                 h2.skillset__heading CSS
                                 progress.skillset__indicator(max='100' value='90')
                             
+                            
+                mixin experienceItem(timestart, timeend, company, location, role)
+                    li.experience__item
+                        h2.experience__heading
+                            span.experience__timestart #{timestart} - 
+                            span.experience__timestend #{timeend}
+                        p.experience__description
+                            strong.experience__company #{company}, 
+                            span.experience__location #{location} 
+                            span.experience__role #{role}
+                
                 section.section.experience
-                    h1.section__heading 
-                        | Experience
+                    h1.section__heading Experience
+                    ol.experience
+                        +experienceItem(
+                            '2013', 
+                            'Present',
+                            'NewsCorp', 
+                            'Australia', 
+                            'Senior Front End Engineer'
+                        )
+                        +experienceItem(
+                            '2011',
+                            '2013',
+                            'Worldnomads Group',
+                            'Australia',
+                            'Front End Developer'
+                        )
                         
             aside.main__aside
             

@@ -7,7 +7,7 @@ const browserSync = require('browser-sync'),
 
     paths = {
         styles: 'styles/main.css',
-        templates: 'index.jade'
+        templates: 'templates/*.jade'
     },
     out = 'build/';
 
@@ -43,10 +43,11 @@ function styles() {
                    require('cssnext')(),
                    require('postcss-nested'),
                    require('csstyle'),
+                   require('postcss-extend'),
                    require('postcss-color-function'),
-                   require('cssnano')({
-                       discardComments: { removeAll: true }
-                   })
+                //    require('cssnano')({
+                //        discardComments: { removeAll: true }
+                //    })
                ]))
                .pipe(gulp.dest(out))
                .pipe(browserSync.stream());
