@@ -1,0 +1,143 @@
+/* Variables */
+:root {
+    --secondaryColor: #44ccaa;
+    --textColor: #666;
+    --highlightColor: #ffbb00;
+    --backgroundColor: rgba(211, 211, 211, 0.3);
+    --borderColor: color(var(--backgroundColor) blackness(50%));
+
+    --mainFont: Roboto, sans-serif;
+    --gridGutter: 2.5rem;
+
+    --gridColumns: 1fr var(--gridGutter) 250px;
+    --gridRows: auto;
+
+    --bodyBorder: 4px solid var(--borderColor);
+}
+
+@custom-selector :--heading h1, h2, h3, h4, h4;
+@custom-selector :--firstLevel main, footer;
+
+/* Styling */
+:--heading {
+    margin-top: 0;
+    color: var(--secondaryColor);
+ }
+
+html {
+    background: var(--backgroundColor);
+    padding: var(--gridGutter);
+}
+
+body {
+    background: white;
+    font-family: var(--mainFont);
+    color: var(--textColor);
+
+    border-right: var(--bodyBorder);
+    border-bottom: var(--bodyBorder);
+}
+
+section { margin-bottom: calc(var(--gridGutter) * 2) }
+
+:--firstLevel { padding: var(--gridGutter); }
+
+a { color: inherit; text-decoration: none; font-style: normal; }
+
+strong { font-style: normal }
+
+/* Components */
+component(main) {
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+    grid-template-rows: var(--gridRows);
+    grid-template-areas: "article . aside";
+
+    part(article) { grid-area: article; }
+
+    part(aside) { grid-area: aside; }
+}
+
+component(banner) {
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+    grid-template-rows: var(--gridRows);
+    grid-template-areas: "banneraside banneraside banneraside"
+                         "bannermain bannermain bannermain";
+
+    background: var(--secondaryColor);
+    color: white;
+    padding: calc(var(--gridGutter));
+    text-align: center;
+
+    part(main) { grid-area: bannermain; }
+
+    part(heading) {
+        color: white;
+        display: inline-block;
+        margin-bottom: 0;
+        border-bottom: 2px solid;
+        font-weight: 300;
+        font-size: 5rem;
+    }
+
+    part(intro) { font-size: 1.1rem; }
+
+    part(aside) { grid-area: banneraside; text-align: left; }
+}
+
+component(address) {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: var(--gridGutter);
+    grid-template-areas: "addressmail . addressweb";
+                         ". . .";
+
+    strong { text-transform: uppercase }
+
+    part(email) { grid-area: addressemail; }
+    part(web) { grid-area: addressweb; text-align: right; }
+}
+
+component(section) {
+    part(heading) {
+        border-bottom: 2px solid;
+        padding-bottom: calc(var(--gridGutter) / 3);
+    }
+}
+
+component(info) {
+    border: 2px solid var(--borderColor);
+    padding: calc(var(--gridGutter) / 2);
+
+    part(header) {
+        border-bottom: 1px solid;
+        padding-bottom: calc(var(--gridGutter) / 3);
+        color: var(--highlightColor);
+    }
+}
+
+component(skillset) {
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    part(item) {
+        margin-bottom: calc(var(--gridGutter) / 2);
+    }
+
+    part(heading) {
+        font-size: 1rem;
+        margin-bottom: calc(var(--gridGutter) / 4);
+        padding-bottom: 0;
+    }
+
+    part(indicator) {
+        appearance: none;
+
+        &::-webkit-progress-bar { background: var(--backgroundColor) }
+        &::-webkit-progress-value { background: color(var(--secondaryColor) a(0.6)) }
+    }
+}

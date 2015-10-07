@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+
+    head
+    
+        title David Pisek - Resume
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        
+        link(rel='stylesheet' href='main.css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet')
+        
+        
+    body
+    
+        header.banner(role='banner')
+        
+            .banner__main
+                h1.banner__heading 
+                    | David Pisek 
+                p.banner__intro 
+                    | Front End Enthusiast par excellence 
+                    
+            address.banner__aside.address
+                .address__email 
+                    strong email: 
+                    a(href='mailto:dave.pisek@gmail.com') dave.pisek@gmail.com
+                .address__web
+                    strong web: 
+                    a(href='http://dave.pisek.me') http://dave.pisek.me
+                
+                
+        main.main(role='main')
+        
+            article.main__article
+            
+                h1 My Resume
+                
+                section.section.overview
+                    h1.section__heading 
+                        | Overview
+                        
+                section.section.skills
+                    h1.section__heading 
+                        | Skills
+                        
+                    .skillset.basic
+                        ul
+                            li.skillset__item
+                                h2.skillset__heading JS
+                                progress.skillset__indicator(max='100' value='95')
+                            li.skillset__item
+                                h2.skillset__heading HTML
+                                progress.skillset__indicator(max='100' value='90')
+                            li.skillset__item
+                                h2.skillset__heading CSS
+                                progress.skillset__indicator(max='100' value='90')
+                            
+                section.section.experience
+                    h1.section__heading 
+                        | Experience
+                        
+            aside.main__aside
+            
+                .info
+                    h2.info__header Awards
+                    ul
+                        li
+                            h3 Accountability Award
+                        li
+                            h3 Dev Foundry (Peoples Choice)
+                    
+                    
+        footer(role='contentinfo')    
+            h2 More to see
+            ul.links
+                li
+                    a(href='http://github.com/davepies') github
+                li
+                    a(href='http://linkedin.com/davepies') linkedin
+
+
+        script(src='https://rawgit.com/FremyCompany/css-grid-polyfill/master/bin/css-polyfills.min.js')
