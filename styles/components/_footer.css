@@ -1,0 +1,21 @@
+component(footer) {
+    background: var(--borderColor);
+
+    part(icon) {
+        width: 30px;
+        height: 30px;
+        fill: color(var(--borderColor) blackness(90%));
+        transition: .25s ease;
+
+        &:hover {
+            fill: color(var(--borderColor) blackness(50%));
+        }
+    }
+
+    part(links){
+        @extend unstyled-list;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}

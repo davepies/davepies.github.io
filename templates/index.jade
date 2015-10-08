@@ -17,9 +17,9 @@ html(lang="en")
         header.banner(role='banner')
         
             .banner__main
-                h1.banner__heading 
+                h1.banner__heading
                     | David Pisek 
-                p.banner__intro 
+                p.banner__intro
                     | Front End Enthusiast par excellence 
                     
             address.banner__aside.address
@@ -38,11 +38,10 @@ html(lang="en")
                 h1 My Resume
                 
                 section.section.overview
-                    h1.section__heading 
+                    h1.section__heading
                         | Overview
                     include content/_overview
                         
-                
                 section.section.skills
                     h1.section__heading 
                         | Skills
@@ -138,14 +137,24 @@ html(lang="en")
                         li
                             h3 Dev Foundry (Peoples Choice)
                     
+        footer.footer(role='contentinfo')    
+            ul.footer__links
+                li.footer__link
+                    a(href='http://github.com/davepies')
+                        svg.footer__icon
+                            use(xlink:href="#github")
+                li.footer__link
+                    a(href='http://twitter.com/davepies')
+                        svg.footer__icon
+                            use(xlink:href="#twitter")
+                li.footer__link
+                    a(href='http://linkedin.com/davepies')
+                        svg.footer__icon
+                            use(xlink:href="#linkedin")
+
+
+        //- SVG Injection
+        div(style='display: none')
+            | <!-- inject:svg --><!-- endinject -->
                     
-        footer(role='contentinfo')    
-            h2 More to see
-            ul.links
-                li
-                    a(href='http://github.com/davepies') github
-                li
-                    a(href='http://linkedin.com/davepies') linkedin
-
-
         script(src='https://rawgit.com/FremyCompany/css-grid-polyfill/master/bin/css-polyfills.min.js')
