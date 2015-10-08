@@ -3,7 +3,10 @@
 
 @import "./_base.css";
 
-@import "./components/_main.css";
+@media (min-width: 800px) {
+    @import "./components/_main.css";
+}
+
 @import "./components/_banner.css";
 @import "./components/_address.css";
 @import "./components/_section.css";

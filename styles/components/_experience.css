@@ -50,6 +50,7 @@ component(experience) {
     part(description) {
         grid-area: experience-content;
         margin: 0;
+
     }
 
     part(company) {
@@ -67,6 +68,16 @@ component(experience) {
     }
 
     part(details) {
+        position: relative;;
+        padding-left: 20px;
         font-size: 0.9rem;
+
+        &:before {
+            content: '\2192';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 }
