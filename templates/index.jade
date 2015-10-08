@@ -1,3 +1,5 @@
+include _mixins
+
 doctype html
 html(lang="en")
 
@@ -38,37 +40,18 @@ html(lang="en")
                 section.section.overview
                     h1.section__heading 
                         | Overview
-                        
+                
                 section.section.skills
                     h1.section__heading 
                         | Skills
                         
                     .skillset.basic
                         ul
-                            li.skillset__item
-                                h2.skillset__heading JS
-                                progress.skillset__indicator(max='100' value='95')
-                            li.skillset__item
-                                h2.skillset__heading HTML
-                                progress.skillset__indicator(max='100' value='90')
-                            li.skillset__item
-                                h2.skillset__heading CSS
-                                progress.skillset__indicator(max='100' value='90')
+                            +skillsetItem('JS', '95')
+                            +skillsetItem('HTML', '90')
+                            +skillsetItem('CSS', '90')
                             
                             
-                mixin experienceItem(timestart, timeend, company, location, role, details)
-                    li.experience__item
-                        h2.experience__heading
-                            time.experience__timeend #{timeend}
-                            br
-                            time.experience__timestart #{timestart} 
-                        div.experience__description
-                            strong.experience__company #{company}, 
-                            span.experience__location #{location} 
-                            span.experience__role #{role}
-                            
-                            if (details)
-                                p.experience__details #{details}
                 
                 section.section.experience
                     h1.section__heading Experience
