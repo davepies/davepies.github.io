@@ -40,6 +40,8 @@ html(lang="en")
                 section.section.overview
                     h1.section__heading 
                         | Overview
+                    include content/_overview
+                        
                 
                 section.section.skills
                     h1.section__heading 
@@ -56,7 +58,8 @@ html(lang="en")
                             h2.skillset__heading.--set Frameworks
                             ul.skillset__content
                                 +skillsetItem('Node', '80')
-                                +skillsetItem('React', '80')
+                                +skillsetItem('React', '85')
+                                +skillsetItem('Gulp', '90')
                         .skillset.other
                             h2.skillset__heading.--set Other
                             ul.skillset__content
@@ -68,7 +71,7 @@ html(lang="en")
                     h1.section__heading Experience
                     ol.experience__content
                         +experienceItem(
-                            'Feb, 2013', 
+                            '2013', 
                             'Present',
                             'NewsCorp', 
                             'Australia', 
@@ -77,12 +80,52 @@ html(lang="en")
                             'Mentoring, FE Architecture'
                         )
                         +experienceItem(
-                            'Jun, 2011',
-                            'Mar, 2013',
+                            '2011',
+                            '2013',
                             'Worldnomads Group',
                             'Australia',
                             'Front End Developer',
                             'HTML, CSS, Javascript, .NET, FE Architecture'
+                        )
+                        +experienceItem(
+                            '2008',
+                            '2013',
+                            'pisek.me',
+                            'Australia',
+                            'Web Developer (freelance)',
+                            'Full Stack Projects, HTML-Email Templates (mainly working for thesquad.com.au and uberbrand.com.au)'
+                        )
+                        +experienceItem(
+                            '2008',
+                            '2011',
+                            'thesquad.com.au',
+                            'Australia',
+                            'Web Developer (freelance)',
+                            'Full Stack Projects (mainly using business catalyst for backend)'
+                        )
+                        +experienceItem(
+                            '2008',
+                            '2007',
+                            'styleflasher.at',
+                            'Austria',
+                            'Web Developer',
+                            'PHP, HTML, CSS, JS, ezPublish (CMS), Client Support'
+                        )
+                        +experienceItem(
+                            '2001',
+                            '2002',
+                            'medel.com',
+                            'Austria',
+                            'IT Support (part time)',
+                            '1st and 2nd level support for a 200+ client network'
+                        )
+                        +experienceItem(
+                            '1999',
+                            '2001',
+                            'mmmm.cc',
+                            'Austria',
+                            'Web Developer (part time)',
+                            'PHP, HTML, CSS, JS, web cam installations and support'
                         )
                         
             aside.main__aside
