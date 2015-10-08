@@ -45,13 +45,24 @@ html(lang="en")
                     h1.section__heading 
                         | Skills
                         
-                    .skillset.basic
-                        ul
-                            +skillsetItem('JS', '95')
-                            +skillsetItem('HTML', '90')
-                            +skillsetItem('CSS', '90')
-                            
-                            
+                    .skills__content
+                        .skillset.basic
+                            h2.skillset__heading.--set Basic
+                            ul.skillset__content
+                                +skillsetItem('JS', '95')
+                                +skillsetItem('HTML', '90')
+                                +skillsetItem('CSS', '90')
+                        .skillset.frameworks
+                            h2.skillset__heading.--set Frameworks
+                            ul.skillset__content
+                                +skillsetItem('Node', '80')
+                                +skillsetItem('React', '80')
+                        .skillset.other
+                            h2.skillset__heading.--set Other
+                            ul.skillset__content
+                                +skillsetItem('Vim', '80')
+                                +skillsetItem('Unix', '75')
+                    
                 
                 section.section.experience
                     h1.section__heading Experience

@@ -3,7 +3,7 @@ component(experience) {
 
     part(item) {
         display: grid;
-        grid-template-columns: 150px var(--gridGutter) 1fr;
+        grid-template-columns: 160px var(--gridGutter) 1fr;
         grid-template-rows: auto;
         grid-template-areas: "experience-heading . experience-content";
         margin: 0;
@@ -15,7 +15,7 @@ component(experience) {
         margin: 0;
         padding-bottom: calc(var(--gridGutter));
         font-size: 1.4rem;
-        border-right: 1px dashed;
+        border-right: 1px solid;
 
         &:after {
             content: '';

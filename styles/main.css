@@ -3,7 +3,7 @@
 
 @import "./_base.css";
 
-@media (min-width: 800px) {
+@media (min-width: 925px) {
     @import "./components/_main.css";
 }
 
@@ -12,4 +12,5 @@
 @import "./components/_section.css";
 @import "./components/_infobox.css";
 @import "./components/_skillset.css";
+@import "./components/_skills.css";
 @import "./components/_experience.css";

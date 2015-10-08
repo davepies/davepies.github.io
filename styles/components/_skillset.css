@@ -9,6 +9,10 @@ component(skillset) {
         margin-bottom: calc(var(--gridGutter) / 4);
         padding-bottom: 0;
         font-size: 1rem;
+
+        option(set) {
+            color: var(--textColor);
+        }
     }
 
     part(indicator) {

@@ -1,0 +1,6 @@
+component(skills) {
+    part(content) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
