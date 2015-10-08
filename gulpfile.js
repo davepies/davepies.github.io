@@ -37,7 +37,7 @@ gulp.task('default', gulp.series('build'));
 function watch() {
     browserSync.init({ server: './build' });
 
-    gulp.watch(paths.styles, styles);
+    gulp.watch('styles/**/*.css', styles);
     gulp.watch(paths.templates, templates)
         .on('change', function () {
             setTimeout(browserSync.reload, 0.5e3);
