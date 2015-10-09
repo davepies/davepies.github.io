@@ -39,11 +39,11 @@ gulp.task(svg);
 gulp.task('build', gulp.series(
     clean,
     gulp.parallel(templates, styles),
-    svg
+    svg, 
+    inlineSources
 ));
 
 gulp.task('serve', gulp.series('build', watch));
-
 gulp.task('default', gulp.series('build'));
 
 
@@ -54,12 +54,19 @@ function watch() {
     gulp.watch(watchPaths.styles, styles);
     gulp.watch(watchPaths.templates, gulp.series(templates, svg))
         .on('change', function () {
+            // need timeout for some reason
             setTimeout(browserSync.reload, 0.5e3);
         });
 }
 
 function clean() {
     return require('del')(['build']);
+}
+
+function inlineSources() {
+    return gulp.src(out + 'index.html')
+               .pipe(require('gulp-inline-source')())
+               .pipe(gulp.dest(out));
 }
 
 function svg() {

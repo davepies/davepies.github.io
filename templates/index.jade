@@ -9,7 +9,11 @@ html(lang="en")
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         
         link(rel='stylesheet' href='main.css')
-        link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet')
+        
+        link(
+            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' 
+            rel='stylesheet'
+        )
         
         
     body
@@ -92,7 +96,9 @@ html(lang="en")
                             'pisek.me',
                             'Australia',
                             'Web Developer (freelance)',
-                            'Full Stack Projects, HTML-Email Templates (mainly working for thesquad.com.au and uberbrand.com.au)'
+                            'Full Stack Projects, HTML-Email Templates ' + 
+                            '(mainly working for thesquad.com.au ' + 
+                            'and uberbrand.com.au)'
                         )
                         +experienceItem(
                             '2008',
@@ -100,7 +106,8 @@ html(lang="en")
                             'thesquad.com.au',
                             'Australia',
                             'Web Developer (freelance)',
-                            'Full Stack Projects (mainly using business catalyst for backend)'
+                            'Full Stack Projects (mainly using ' + 
+                            'business catalyst for backend)'
                         )
                         +experienceItem(
                             '2008',
@@ -108,7 +115,8 @@ html(lang="en")
                             'styleflasher.at',
                             'Austria',
                             'Web Developer',
-                            'PHP, HTML, CSS, JS, ezPublish (CMS), Client Support'
+                            'PHP, HTML, CSS, JS, ezPublish (CMS), ' + 
+                            'Client Support'
                         )
                         +experienceItem(
                             '2001',
@@ -116,7 +124,8 @@ html(lang="en")
                             'medel.com',
                             'Austria',
                             'IT Support (part time)',
-                            '1st and 2nd level support for a 200+ client network'
+                            '1st and 2nd level support for a 200+ ' + 
+                            'client network'
                         )
                         +experienceItem(
                             '1999',
@@ -124,7 +133,8 @@ html(lang="en")
                             'mmmm.cc',
                             'Austria',
                             'Web Developer (part time)',
-                            'PHP, HTML, CSS, JS, web cam installations and support'
+                            'PHP, HTML, CSS, JS, web cam installations' +
+                            'and support'
                         )
                         
             aside.main__aside
@@ -157,4 +167,5 @@ html(lang="en")
         div(style='display: none')
             | <!-- inject:svg --><!-- endinject -->
                     
-        script(src='https://rawgit.com/FremyCompany/css-grid-polyfill/master/bin/css-polyfills.min.js')
+        //- | <!-- inline assets/inline/grid-pollyfill.js -->
+        script(src='../assets/inline/grid-pollyfill.js' inline)
