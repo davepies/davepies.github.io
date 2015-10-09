@@ -1,8 +1,22 @@
+:root {
+    --infoBoxSpacing: calc(var(--gridGutter) / 2);
+}
+
 component(infobox) {
-    padding: calc(var(--gridGutter) / 2);
+    padding: var(--infoBoxSpacing);
+    margin: 0 0 var(--infoBoxSpacing) 0;
     border: 2px solid var(--borderColor);
 
     ul { @extend unstyled-list }
+
+    part(content) {
+        h3 { margin-bottom: 0 }
+        p { margin-top: calc(var(--gridGutter) / 6) }
+
+        &:last-child {
+            p { margin-bottom: 0 }
+        }
+    }
 
     part(header) {
         padding-bottom: calc(var(--gridGutter) / 3);
