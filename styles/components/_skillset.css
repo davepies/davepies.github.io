@@ -19,5 +19,7 @@ component(skillset) {
         appearance: none;
         &::-webkit-progress-bar { background: var(--backgroundColor) }
         &::-webkit-progress-value { background: color(var(--secondaryColor) a(0.6)) }
+
+        &::-moz-progress-bar { background: color(var(--secondaryColor) a(0.6)) }
     }
 }
