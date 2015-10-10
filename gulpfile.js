@@ -1,6 +1,3 @@
-/* globals require, process, setTimeout */
-/* jshint esnext:true */
-
 'use strict';
 
 const path = require('path'),
