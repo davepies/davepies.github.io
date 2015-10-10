@@ -12,6 +12,8 @@ body {
     border-bottom: var(--bodyBorder);
 }
 
+* { box-sizing: border-box; }
+
 section { margin-bottom: calc(var(--gridGutter) * 2) }
 
 :--firstLevel { padding: var(--gridGutter); }

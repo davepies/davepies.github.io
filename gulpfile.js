@@ -39,7 +39,7 @@ gulp.task(svg);
 gulp.task('build', gulp.series(
     clean,
     gulp.parallel(templates, styles),
-    svg, 
+    svg,
     inlineSources
 ));
 
@@ -117,6 +117,7 @@ function styles() {
             require('postcss-nested'),
             require('csstyle'),
             require('postcss-extend'),
+            require('lost'),
             require('postcss-color-function')
         ],
         prodPlugins = [

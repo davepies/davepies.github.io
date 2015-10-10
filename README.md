@@ -5,4 +5,4 @@
 ## Stuff used
     - postcss
     - gulp 4
-    - CSS Grid Layout + pollyfill (not sure if this the best choice but wanted to play with it)
+    - lost grid system

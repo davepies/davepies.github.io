@@ -16,3 +16,8 @@
 
 @custom-selector :--heading h1, h2, h3, h4;
 @custom-selector :--firstLevel main, footer;
+
+/* grid settings */
+@lost gutter 2.5rem;
+@lost flexbox flex;
+@lost cycle auto;

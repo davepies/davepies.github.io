@@ -20,12 +20,6 @@ html(lang="en")
     
         header.banner(role='banner')
         
-            .banner__main
-                h1.banner__heading
-                    | David Pisek 
-                p.banner__intro
-                    | Front End Enthusiast par excellence 
-                    
             address.banner__aside.address
                 .address__email 
                     strong email: 
@@ -34,6 +28,13 @@ html(lang="en")
                     strong web: 
                     a(href='http://dave.pisek.me') http://dave.pisek.me
                 
+        
+            .banner__main
+                h1.banner__heading
+                    | David Pisek 
+                p.banner__intro
+                    | Front End Enthusiast par excellence 
+                    
                 
         main.main(role='main')
         
@@ -185,6 +186,3 @@ html(lang="en")
         //- SVG Injection
         div(style='display: none')
             | <!-- inject:svg --><!-- endinject -->
-                    
-        //- | <!-- inline assets/inline/grid-pollyfill.js -->
-        script(src='../assets/inline/grid-pollyfill.js' inline)

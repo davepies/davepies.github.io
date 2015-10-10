@@ -1,12 +1,17 @@
 component(address) {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: var(--gridGutter);
-    grid-template-areas: "addressmail . addressweb";
-                         ". . .";
+
+    lost-flex-container: row;
+    lost-row: 1/2 calc(var(--gridGutter) * 1/2);
 
     strong { text-transform: uppercase }
 
-    part(email) { grid-area: addressemail; }
-    part(web) { grid-area: addressweb; text-align: right; }
+    part(email) {
+        lost-column: 1/2;
+    }
+
+    part(web) {
+        lost-column: 1/2;
+        text-align: right;
+    }
+
 }
