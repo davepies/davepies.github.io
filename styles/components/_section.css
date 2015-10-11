@@ -1,6 +1,11 @@
 component(section) {
+
+    margin-bottom: calc(var(--gridGutter));
+    font-size:  0.95rem;
+
     part(heading) {
         padding-bottom: calc(var(--gridGutter) / 3);
+        margin-bottom: calc(var(--gridGutter) / 2);
         border-bottom: 2px solid;
     }
 }
