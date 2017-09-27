@@ -16,7 +16,7 @@ const path = require('path'),
           templates: 'templates/**/*.jade',
           styles: 'styles/**/*.css'
       },
-      out = 'build/',
+      out = 'docs/',
 
       knownOptions = {
           string: 'env',
@@ -46,7 +46,7 @@ gulp.task('default', gulp.series('build'));
 
 // tasks
 function watch() {
-    browserSync.init({ server: './build' });
+    browserSync.init({ server: './docs' });
 
     gulp.watch(watchPaths.styles, styles);
     gulp.watch(watchPaths.templates, gulp.series(templates, svg))
@@ -57,7 +57,7 @@ function watch() {
 }
 
 function clean() {
-    return require('del')(['build']);
+    return require('del')(['docs']);
 }
 
 function inlineSources() {
