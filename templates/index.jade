@@ -8,7 +8,7 @@ html(lang="en")
         title David Pisek - Resume
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         
-        link(rel='stylesheet' href='main.css')
+        link(rel='stylesheet' href='main.css' inline)
         
         link(
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' 
@@ -24,10 +24,6 @@ html(lang="en")
                 .address__email 
                     strong email: 
                     a(href='mailto:dave.pisek@gmail.com') dave.pisek@gmail.com
-                .address__web
-                    strong web: 
-                    a(href='http://dave.pisek.me') http://dave.pisek.me
-                
         
             .banner__main
                 h1.banner__heading
@@ -56,6 +52,9 @@ html(lang="en")
                     p
                         | I am happy within a team that is open, great on sharing 
                         | knowledge and working on improving itself constantly.
+                    p
+                        | I also have experience in hiring the right people to build
+                        | great product teams. 
                 
                 section.section.overview
                     h1.section__heading
@@ -70,30 +69,41 @@ html(lang="en")
                         .skillset.basic
                             h2.skillset__heading.--set Basic
                             ul.skillset__content
-                                +skillsetItem('JS', '95')
+                                +skillsetItem('JS', '100')
                                 +skillsetItem('HTML', '90')
                                 +skillsetItem('CSS', '90')
                                 +skillsetItem('PHP', '70')
                         .skillset.frameworks
                             h2.skillset__heading.--set Frameworks
                             ul.skillset__content
-                                +skillsetItem('Node', '80')
-                                +skillsetItem('React', '85')
+                                +skillsetItem('React', '100')
+                                +skillsetItem('Redux', '100')
                                 +skillsetItem('Gulp', '90')
+                                +skillsetItem('Angular', '80')
+                                +skillsetItem('Larvel', '80')
                         .skillset.other
                             h2.skillset__heading.--set Other
                             ul.skillset__content
+                                +skillsetItem('Node', '80')
                                 +skillsetItem('Unix', '75')
                                 +skillsetItem('Agile', '75')
                                 +skillsetItem('git', '75')
-                    
                 
                 section.section.experience
                     h1.section__heading Experience
                     ol.experience__content
                         +experienceItem(
-                            '2013', 
+                            '2016', 
                             'Present',
+                            'Chuffed.org', 
+                            'Australia', 
+                            'Lead Engineer',
+                            'CSS, JS, React, Redux, PHP, Laravel, AWS, Automation, ' +
+                            'Mentoring, FE Architecture, Team Lead'
+                        )
+                        +experienceItem(
+                            '2013', 
+                            '2016',
                             'NewsCorp', 
                             'Australia', 
                             'Senior Front End Engineer',
@@ -151,7 +161,7 @@ html(lang="en")
                             'mmmm.cc',
                             'Austria',
                             'Web Developer (part time)',
-                            'PHP, HTML, CSS, JS, web cam installations' +
+                            'PHP, HTML, CSS, JS, web cam installations ' +
                             'and support'
                         )
                         
