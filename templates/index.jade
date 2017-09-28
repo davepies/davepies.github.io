@@ -8,7 +8,7 @@ html(lang="en")
         title David Pisek - Resume
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         
-        link(rel='stylesheet' href='main.css' inline)
+        link(rel='stylesheet' href='main.css')
         
         link(
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' 
@@ -47,8 +47,7 @@ html(lang="en")
 
                     p
                         | New tools, frameworks and better ways of doing things
-                        | excite me. Currently I am very keen on learning more
-                        | about react, flux and isomorphic applications.
+                        | excite me. 
                     p
                         | I am happy within a team that is open, great on sharing 
                         | knowledge and working on improving itself constantly.
@@ -56,11 +55,6 @@ html(lang="en")
                         | I also have experience in hiring the right people to build
                         | great product teams. 
                 
-                section.section.overview
-                    h1.section__heading
-                        | Overview
-                    include content/_overview
-                        
                 section.section.skills
                     h1.section__heading 
                         | Skills
@@ -74,13 +68,14 @@ html(lang="en")
                                 +skillsetItem('CSS', '90')
                                 +skillsetItem('PHP', '70')
                         .skillset.frameworks
-                            h2.skillset__heading.--set Frameworks
+                            h2.skillset__heading.--set Frameworks / Tools
                             ul.skillset__content
                                 +skillsetItem('React', '100')
                                 +skillsetItem('Redux', '100')
                                 +skillsetItem('Gulp', '90')
+                                +skillsetItem('Webpack', '90')
                                 +skillsetItem('Angular', '80')
-                                +skillsetItem('Larvel', '80')
+                                +skillsetItem('Laravel', '80')
                         .skillset.other
                             h2.skillset__heading.--set Other
                             ul.skillset__content
@@ -164,6 +159,12 @@ html(lang="en")
                             'PHP, HTML, CSS, JS, web cam installations ' +
                             'and support'
                         )
+
+                section.section.overview
+                    h1.section__heading
+                        | In detail
+                    include content/_overview
+                        
                         
             aside.main__aside
             

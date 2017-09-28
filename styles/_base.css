@@ -21,6 +21,7 @@ section { margin-bottom: calc(var(--gridGutter) * 2) }
 a { color: inherit; text-decoration: none; font-style: normal; }
 
 :--heading { @extend h; }
+
 h1 { margin-bottom: var(--gridGutter) }
 h3 { @extend h3; }
 

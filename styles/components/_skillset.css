@@ -2,7 +2,12 @@ component(skillset) {
     ul { @extend unstyled-list }
 
     part(item) {
-        margin-bottom: calc(var(--gridGutter) / 2);
+
+        margin-bottom: var(--gridGutter);
+
+        @media (min-width: 620px) {
+            margin-bottom: calc(var(--gridGutter) / 2);
+        }
     }
 
     part(heading) {
@@ -17,6 +22,11 @@ component(skillset) {
 
     part(indicator) {
         appearance: none;
+
+        @media (max-width: 620px) {
+            width: 100%;
+        }
+
         &::-webkit-progress-bar { background: var(--backgroundColor) }
         &::-webkit-progress-value { background: color(var(--secondaryColor) a(0.6)) }
 

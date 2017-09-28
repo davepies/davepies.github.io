@@ -1,6 +1,8 @@
 component(skills) {
     part(content) {
-        display: flex;
-        justify-content: space-between;
+        @media (min-width: 620px) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
